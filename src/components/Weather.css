@@ -1,127 +1,129 @@
 .weather{
-    place-self: center;
-    padding: 40px;
-    border-radius: 10px;
-    background-image: linear-gradient(45deg, #2f4680, #500ae4);
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    align-items: center;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  place-self: center;
+  padding: 40px;
+  border-radius: 10px;
+  background-image: linear-gradient(45deg, #2f4680, #500ae4);
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  align-items: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 .searchbar {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  width: 100%; /* Make it full width by default */
-  background: #ebfffc;
-  border-radius: 50px; /* Fully rounded ends */
-  padding: 5px 8px; /* Add some padding inside the bar */
-  box-sizing: border-box; /* Important for padding and width */
+display: flex;
+align-items: center;
+gap: 12px;
+width: 100%; /* Make it full width by default */
+background: #ebfffc;
+border-radius: 50px; /* Fully rounded ends */
+padding: 5px 8px; /* Add some padding inside the bar */
+box-sizing: border-box; /* Important for padding and width */
 }
 
 .searchbar input {
-  flex-grow: 1; /* <-- KEY CHANGE: Allows input to fill available space */
-  border: none;
-  outline: none;
-  padding: 10px 15px;
-  color: #626262;
-  background: transparent; /* Inherit background from parent */
-  font-size: 18px;
-  width: 100%; /* Helps with flexibility */
+flex-grow: 1; 
+border: none;
+outline: none;
+padding: 10px 15px;
+color: #626262;
+background: #ebfffc;
+background: transparent; 
+font-size: 18px;
+width: 100%; 
 }
 
 .search-icon{
-  width: 45px;   /* Set a consistent size */
-  height: 45px;
-  padding: 12px; /* Control the icon's inner spacing */
-  border-radius: 50%;
-  background: #500ae4; /* Give the icon a background */
-  cursor: pointer;
-  box-sizing: border-box;
+width: 45px;   
+height: 45px;
+padding: 12px; 
+padding-right: 5px;
+border-radius: 50%;
+background: #ebfffc; 
+cursor: pointer;
+box-sizing: border-box;
 }
 .weather-icon{
-  width: 150px;
-  margin: 30px 0;
+width: 150px;
+margin: 30px 0;
 }
 .temperature{
-    color: #fff;
-    font-size: 80px;
-    line-height: 1;
+  color: #fff;
+  font-size: 80px;
+  line-height: 1;
 }
 .location{
-    color: #fff;
-    font-size: 40px;
+  color: #fff;
+  font-size: 40px;
 }
 .weather-data{
-    width: 100%;
-    margin-top: 40px;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  margin-top: 40px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
 }
 .col{
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    font-size: 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 22px;
 }
 .col span{
-    display: block;
-    font-size: 16px;
+  display: block;
+  font-size: 16px;
 }
 .col img{
-    width: 26px;
-    margin-top: 10px;
+  width: 26px;
+  margin-top: 10px;
 }
 .unkown{
-    color: white;
-    padding-top: 20px;
+  color: white;
+  padding-top: 20px;
 
 }
 /* 📱 Mobile scaling (no position changes) */
 @media (max-width: 600px) {
-    .weather {
-      max-width: 65%;
-      padding: 15px;
-    }
-    .searchbar {
-    width: 90%; /* Use a bit more screen space */
-    margin-top: 20px;
+  .weather {
+    max-width: 65%;
+    padding: 15px;
+  }
+  .searchbar {
+  width: 90%; /* Use a bit more screen space */
+  margin-top: 20px;
+}
+
+.searchbar input {
+  font-size: 16px; /* Slightly smaller font for mobile */
+  padding: 8px 10px;
+}
+
+/* Corrected selector and adjusted size for mobile icon */
+.search-icon {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+}
+
+  .weather-icon {
+    width: 90px;
+    margin: 15px 0px;
   }
 
-  .searchbar input {
-    font-size: 16px; /* Slightly smaller font for mobile */
-    padding: 8px 10px;
+  .temperature {
+    font-size: 1.8rem;
   }
 
-  /* Corrected selector and adjusted size for mobile icon */
-  .search-icon {
-    width: 40px;
-    height: 40px;
-    padding: 10px;
+  .location {
+    font-size: 1rem;
   }
-  
-    .weather-icon {
-      width: 90px;
-      margin: 15px 0px;
-    }
-  
-    .temperature {
-      font-size: 1.8rem;
-    }
-  
-    .location {
-      font-size: 1rem;
-    }
-  
-    .col {
-      font-size: 10px;
-        padding: 8px;
-    }
-  
-    .col img {
-      width: 20px;
-      height: 20px;
-    }
+
+  .col {
+    font-size: 10px;
+      padding: 8px;
   }
+
+  .col img {
+    width: 20px;
+    height: 20px;
+  }
+}
