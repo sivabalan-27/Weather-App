@@ -79,6 +79,7 @@
     }
     .searchbar{
         margin-top: 10px;
+        width:80%;
     }
     .searchbar input {
       font-size: 0.8rem;
