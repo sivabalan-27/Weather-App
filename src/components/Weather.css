@@ -9,28 +9,36 @@
     align-items: center;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
-.searchbar{
+.searchbar {
   display: flex;
   align-items: center;
   gap: 12px;
+  width: 100%; /* Make it full width by default */
   background: #ebfffc;
-  border-radius: 25px;
-
+  border-radius: 50px; /* Fully rounded ends */
+  padding: 5px 8px; /* Add some padding inside the bar */
+  box-sizing: border-box; /* Important for padding and width */
 }
-.searchbar input{
+
+.searchbar input {
+  flex-grow: 1; /* <-- KEY CHANGE: Allows input to fill available space */
   border: none;
   outline: none;
-  border-radius: 40px;
-  padding-left: 25px;
+  padding: 10px 15px;
   color: #626262;
-  background: #ebfffc;
+  background: transparent; /* Inherit background from parent */
   font-size: 18px;
+  width: 100%; /* Helps with flexibility */
 }
-.searchbar img{
-  padding: 15px;
+
+.search-icon{
+  width: 45px;   /* Set a consistent size */
+  height: 45px;
+  padding: 12px; /* Control the icon's inner spacing */
   border-radius: 50%;
-  
+  background: #500ae4; /* Give the icon a background */
   cursor: pointer;
+  box-sizing: border-box;
 }
 .weather-icon{
   width: 150px;
@@ -77,20 +85,22 @@
       max-width: 65%;
       padding: 15px;
     }
-    .searchbar{
-        margin-top: 10px;
-        width:80%;
-    }
-    .searchbar input {
-      font-size: 0.8rem;
-      padding: 10px;
-      margin-left: 8px;
-    }
-  
-    .searchb-icon {
-      width: 10px;
-      height: 10px;
-    }
+    .searchbar {
+    width: 90%; /* Use a bit more screen space */
+    margin-top: 20px;
+  }
+
+  .searchbar input {
+    font-size: 16px; /* Slightly smaller font for mobile */
+    padding: 8px 10px;
+  }
+
+  /* Corrected selector and adjusted size for mobile icon */
+  .search-icon {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+  }
   
     .weather-icon {
       width: 90px;
